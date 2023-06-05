@@ -1,0 +1,3 @@
+#!/bin/bash
+code="$PYCODE"
+python3.11 -c "$code"
