@@ -1,3 +1,2 @@
 #!/bin/bash
-code="$PYCODE"
-PYCODE='print(f"Yet another day in the best school")' 
+python3 -c "$PYCODE" 
