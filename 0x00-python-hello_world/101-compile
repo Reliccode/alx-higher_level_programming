@@ -1,2 +1,13 @@
-#!/usr/bin/python3
-python -m "$PYFILE" 
+#!/bin/bash
+
+pyfile=$PYFILE
+pycfile="${pyfile}c"
+
+python -m py_compile $pyfile
+
+if [ -f $pycfile ]; then
+  echo "Successful. Output file: $pycfile"
+else
+  echo "Failed."
+fi
+ 
