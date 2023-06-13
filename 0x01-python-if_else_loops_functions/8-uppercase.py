@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-string = "I don't want to use ord!"
-print(string.upper())
-print()
+def uppercase(str):
+    for string in range(len(str)):
+        if ord(str[string]) >= 97 and ord(str[string]) <= 122:
+            number = 32
+        else:
+            number = 0
+        print("{:c}".format(ord(str[string]) - number), end='')
+    print()
