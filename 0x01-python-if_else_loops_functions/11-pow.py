@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def pow(a, b):
     result = a ** b
-    int(result) 
+    int(result)
     return result
