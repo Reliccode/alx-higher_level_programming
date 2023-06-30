@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Module - Square
+"""
+
+
 class Square:
-    def __init__(self, side):
-        self.side = side
+    """
+    Empty class Square that defines a square.
+    """
+    pass
