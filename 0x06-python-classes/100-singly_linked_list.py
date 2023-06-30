@@ -98,10 +98,10 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None and value >= current.next_node.data:
-                current = current.next_node
-            new_node.next_node = current.next_node
-            current.next_node = new_node
+            while curr.next_node is not None and value >= curr.next_node.data:
+                current = curr.next_node
+            new_node.next_node = curr.next_node
+            curr.next_node = new_node
 
     def __str__(self):
         """
@@ -114,5 +114,5 @@ class SinglyLinkedList:
         nodes = []
         while current is not None:
             nodes.append(str(current.data))
-            current = current.next_node
+            current = curr.next_node
         return '\n'.join(nodes)
