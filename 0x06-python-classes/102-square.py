@@ -55,7 +55,7 @@ class Square:
         """
         return self.__size ** 2
 
-    def __equality__(self, other):
+    def __eq__(self, other):
         """
         Equality comparison btn 2 Square instances
 
@@ -67,7 +67,7 @@ class Square:
         """
         return self.area() == other.area()
 
-    def __inequality__(self, other):
+    def __ne__(self, other):
         """
         Inequality comparison between two Square instances
 
@@ -79,7 +79,7 @@ class Square:
         """
         return self.area() != other.area()
 
-    def __greater__(self, other):
+    def __gt__(self, other):
         """
         Greater than comparison between two Square instances
 
@@ -91,7 +91,7 @@ class Square:
         """
         return self.area() > other.area()
 
-    def __greq__(self, other):
+    def __ge__(self, other):
         """
         Greater than or equal comparison between two Square instances
 
@@ -103,7 +103,7 @@ class Square:
         """
         return self.area() >= other.area()
 
-    def __lessthan__(self, other):
+    def __lt__(self, other):
         """
         Less than comparison between two Square instances
 
@@ -115,7 +115,7 @@ class Square:
         """
         return self.area() < other.area()
 
-    def __lessequal__(self, other):
+    def __le__(self, other):
         """
         Less than or equal comparison btn two Square instances
 
