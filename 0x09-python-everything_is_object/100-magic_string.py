@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-def magic_string(string_list=None):
-    if string_list is None:
-        string_list = []
-    string_list.append("BestSchool")
-    return ", ".join(string_list)
+def magic_string():
+    magic_string.count = getattr(magic_string, 'count', 0) + 1
+    return "BestSchool" + ", BestSchool" * (magic_string.count - 1)
