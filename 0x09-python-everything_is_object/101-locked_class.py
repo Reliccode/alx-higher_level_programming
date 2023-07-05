@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-"""
-
-This is a module that containts a clas that avoids
-dynmaically created attributes
-
-"""
-
-
 class LockedClass:
-    __slots__ = ['first_name']
+    """
+    LockedClass that prevents dynamic creation of instance attributes
+    except for 'first_name'.
+    """
 
-    def __init__(self):
-        """ Init method """
-        pass
+    def __setattr__(self, name, value):
+        if name != 'first_name':
+            raise AttributeError("'LockedClass'no attribute '{}'".format(name))
+        else:
+            self.__dict__[name] = value
