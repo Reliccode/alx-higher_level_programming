@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module that contains function that returns an object represented by a JSON string
+Module that contains function that returns an object 
+represented by a JSON string
 """
 
 import json
@@ -17,4 +18,7 @@ def from_json_string(my_str):
         object: The Python data structure represented by the JSON string.
 
     """
-    return json.loads(my_str)
+    try:
+        return json.loads(my_str)
+    except ValueError:
+        return None
