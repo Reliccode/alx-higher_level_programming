@@ -18,3 +18,20 @@ def save_to_json_file(my_obj, filename):
     """
     with open(filename, mode='w', encoding='utf-8') as file:
         json.dump(my_obj, file)
+
+
+if __name__ == "__main__":
+    my_list = [1, 2, 3]
+    save_to_json_file(my_list, "my_list.json")
+
+    my_dict = {
+        'id': 12,
+        'name': "John",
+        'places': ["San Francisco", "Tokyo"],
+        'is_active': True,
+        'info': {
+            'age': 36,
+            'average': 3.14
+        }
+    }
+    save_to_json_file(my_dict, "my_dict.json")
