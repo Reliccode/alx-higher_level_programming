@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module that contains function that returns an object 
-represented by a JSON string
+Module that contains function that returns an 
+object represented by a JSON string
 """
 
 import json
@@ -20,5 +20,5 @@ def from_json_string(my_str):
     """
     try:
         return json.loads(my_str)
-    except ValueError:
+    except json.JSONDecodeError:
         return None
