@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Function that takes args obj, name, value"""
+
+
 def add_attribute(obj, name, value):
     """ Function that adds a new attribute to an object
 
