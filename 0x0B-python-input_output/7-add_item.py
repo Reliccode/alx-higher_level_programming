@@ -1,32 +1,19 @@
 #!/usr/bin/python3
+""" Module that adds all arguments to a Python list, and then
+save them to a file
 """
-Script: 7-add_item
-Adds all arguments to a Python list and saves them to a file
-"""
-
 import sys
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+import os.path
 
 
-def add_item(args):
-    """
-    Adds all arguments to a Python list and saves them to a file.
+save_file = __import__('5-save_to_json_file').save_to_json_file
+load_file = __import__('6-load_from_json_file').load_from_json_file
 
-    Args:
-        args: The list of arguments.
+my_list = []
+if os.path.exists("add_item.json"):
+    my_list = load_file("add_item.json")
 
-    """
-    filename = "add_item.json"
+for arg in sys.argv[1:]:
+    my_list.append(arg)
 
-    try:
-        my_list = load_from_json_file(filename)
-    except FileNotFoundError:
-        my_list = []
-
-    my_list.extend(args)
-    save_to_json_file(my_list, filename)
-
-
-if __name__ == "__main__":
-    add_item(sys.argv[1:])
+save_file(my_list, "add_item.json")
