@@ -50,6 +50,7 @@ if __name__ == "__main__":
                 magic.size += int(list_line[-1].strip("\n"))
             except Exception as e:
                 print(f"An error occured: {str(e)}")
+                pass
             nlines += 1
     except KeyboardInterrupt:
         magic.print_info()
