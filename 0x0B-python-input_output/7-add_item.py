@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Script: 7-add_item
 Adds all arguments to a Python list and saves them to a file
 """
 
@@ -17,12 +18,11 @@ def add_item(args):
 
     """
     filename = "add_item.json"
-    my_list = []
 
     try:
         my_list = load_from_json_file(filename)
     except FileNotFoundError:
-        pass
+        my_list = []
 
     my_list.extend(args)
     save_to_json_file(my_list, filename)
