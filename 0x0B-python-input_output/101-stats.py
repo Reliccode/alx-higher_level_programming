@@ -19,10 +19,6 @@ try:
     for line in sys.stdin:
         lines_read += 1
         split_line = line.split()
-        if len(split_line) >= 2:
-            status_code = split_line[-2]
-            if status_code in metrics:
-                metrics[status_code] += 1
         if len(split_line) >= 3:
             try:
                 file_size = int(split_line[-1])
@@ -30,16 +26,21 @@ try:
             except ValueError:
                 pass
 
+        if len(split_line) >= 4:
+            status_code = split_line[-2]
+            if status_code in metrics:
+                metrics[status_code] += 1
+
         if lines_read % 10 == 0:
             print(f"File size: {total_file_size}")
-            for status_code, count in sorted(metrics.items()):
-                if count > 0:
-                    print(f"{status_code}: {count}")
+            for status_code in sorted(metrics.keys()):
+                if metrics[status_code] > 0:
+                    print(f"{status_code}: {metrics[status_code]}")
 
 except KeyboardInterrupt:
     pass
 
 print(f"File size: {total_file_size}")
-for status_code, count in sorted(metrics.items()):
-    if count > 0:
-        print(f"{status_code}: {count}")
+for status_code in sorted(metrics.keys()):
+    if metrics[status_code] > 0:
+        print(f"{status_code}: {metrics[status_code]}")
