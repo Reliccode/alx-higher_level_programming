@@ -9,7 +9,6 @@ class Student:
     Represents a student.
     """
 
-
     def __init__(self, first_name, last_name, age):
         """
         Initializes a new Student instance.
@@ -24,7 +23,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self):
         """
         Retrieves a dictionary representation of the Student instance.
@@ -34,4 +32,3 @@ class Student:
 
         """
         return self.__dict__
-
