@@ -1,10 +1,15 @@
 #!/usr/bin/node
 
-function factorial (a) {
-  if ((Number.isNaN(a)) || (a === 1)) {
-    return 1;
-  }
-  return factorial(a - 1) * a;
+function add (a, b) {
+  return parseInt(a) + parseInt(b);
 }
 
-console.log(factorial(parseInt(process.argv[2])));
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+
+if (arg1 && arg2) {
+  const result = add(arg1, arg2);
+  console.log(result);
+} else {
+  console.log('NaN');
+}
