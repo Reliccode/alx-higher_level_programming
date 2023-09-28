@@ -3,7 +3,6 @@
 
 
 def find_peak(list_of_integers):
-
     if not list_of_integers:
         return None
 
@@ -19,8 +18,6 @@ def find_peak(list_of_integers):
         return find_peak(li[:mid])
     else:
         return find_peak(li[mid + 1:])
-
-# Example usage:
 
 
 print(find_peak([1, 2, 4, 6, 3]))
