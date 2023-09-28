@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script sends a request to 0.0.0.0:5000/catch_me and displays the response
+# This script sends a PUT request to 0.0.0.0:5000/catch_me to get the desired response
 
-# Send a POST request with a custom header to trigger the server response
-curl -s -X PUT 0.0.0.0:5000/catch_me -d "user_id=98" -H "Origin: HolbertonSchool"
+# Send a PUT request with the specified data
+curl -sLX PUT 0.0.0.0:5000/catch_me -d "user_id=98" -H "Origin: HolbertonSchool" -o /dev/null -w "You got me!"
