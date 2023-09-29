@@ -2,11 +2,11 @@
 """Fetches https://alx-intranet.hbtn.io/status using urllib."""
 
 import urllib.request
+import urllib.error
 
-def fetch_and_display_status():
+def status():
     """
-    Fetches the status from https://alx-intranet.hbtn.io/status
-    and displays info.
+    Fetches status from https://alx-intranet.hbtn.io/status.
     """
     url = 'https://alx-intranet.hbtn.io/status'
 
@@ -21,4 +21,4 @@ def fetch_and_display_status():
         print('Error:', e)
 
 if __name__ == '__main__':
-    fetch_and_display_status()
+    status()
