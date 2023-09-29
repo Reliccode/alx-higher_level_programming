@@ -4,6 +4,7 @@
 import urllib.request
 import urllib.error
 
+
 def status():
     """
     Fetches status from https://alx-intranet.hbtn.io/status.
@@ -19,6 +20,7 @@ def status():
             print('\t- utf8 content: {}'.format(html.decode('utf-8')))
     except urllib.error.URLError as e:
         print('Error:', e)
+
 
 if __name__ == '__main__':
     status()
