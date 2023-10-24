@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/films/${movieId}/';
+const url = 'https://swapi-api.alx-tools.com/api/films/:id/';
 let id = parseInt(process.argv[2], 10);
 let characters = [];
 
