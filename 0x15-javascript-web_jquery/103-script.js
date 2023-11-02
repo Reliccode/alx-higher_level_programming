@@ -12,7 +12,7 @@ window.onload = function () {
 
 function showHello () {
   const lan = $('INPUT#language_code').val();
-  $.get('https://fourtonfish.com/hellosalut/?lang=' + lan, function (data, textStatus) {
+  $.get('https://www.fourtonfish.com/hellosalut/hello/' + lan, function (data, textStatus) {
     $('DIV#hello').text(data.hello);
   });
 }
